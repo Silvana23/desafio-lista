@@ -1,0 +1,46 @@
+.ts-message {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 100%;
+
+    width: 24rem;
+    min-height: 2.5rem;
+
+    bottom: 3rem;
+    left: 50%;
+
+    border-radius: 8px;
+
+    transform: translateX(-50%);
+
+    transition: opacity 500ms ease-in-out;
+}
+
+.ts-message > p {
+    margin: 0;
+    padding: 0;
+}
+
+.ts-message-0 {
+    background-color: var(--alt-0);
+    color: var(--bg-0);
+}
+
+.ts-message-1 {
+    background-color: var(--alt-1);
+    color: var(--bg-0);
+}
+
+.ts-message-2 {
+    background-color: var(--alt-2);
+    color: var(--bg-0);
+}
+
+.ts-message-hidden {
+    opacity: 0;
+}

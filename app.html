@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/message.css" />
+
+    <script defer async type="module" src="src/app.mjs"></script>
+
+    <title>TaskStream - Your workflow. Streamlined.</title>
+</head>
+<body>
+    <div id="app">
+        <header class="ts-header">
+            <h1>Hello, <span id="ts-user-name"></span>!</h1>
+            <img src="img/taskstream-logo-wireframe.svg" alt="TaskStream Logo" />
+            <button id="logout-btn" class="ts-app-button">Log Out</button>
+        </header>
+        <main class="ts-main">
+            <div class="ts-task-editor">
+                <div class="ts-task-editor-row">
+                    <input class="ts-task-editor-input" id="taskName" type="text" placeholder="Title"/>
+                </div>
+                <div class="ts-task-editor-row">
+                    <input class="ts-task-editor-input" id="taskStartDate" type="text" placeholder="Start Date" onfocus="(this.type='date')" />
+                    <input class="ts-task-editor-input" id="taskStartTime" type="text" placeholder="Start Time" onfocus="(this.type='time')" />
+                </div>
+                <div class="ts-task-editor-row">
+                    <input class="ts-task-editor-input" id="taskEndDate" type="text" placeholder="End Date" onfocus="(this.type='date')" />
+                    <input class="ts-task-editor-input" id="taskEndTime" type="text" placeholder="End Time" onfocus="(this.type='time')" />
+                </div>
+                <div class="ts-task-editor-row">
+                    <textarea class="ts-task-editor-input" id="taskContent" placeholder="Description"></textarea>
+                </div>
+                <div class="ts-task-editor-row ts-task-editor-controls">
+                    <button class="ts-app-button" id="taskCreateButton">Create Task</button>
+                    <button class="ts-app-button ts-app-button-hidden" id="taskModifyButton">Modify Task</button>
+                    <button class="ts-app-button ts-app-button-hidden" id="taskDeleteButton">Delete Task</button>
+                    <button class="ts-app-button ts-app-button-hidden" id="taskFinishButton"><span id="taskFinishText"></span></button>
+                    <button class="ts-app-button ts-app-button-hidden" id="taskCancelButton">Cancel</button>
+                </div>
+            </div>
+            <div class="ts-task-viewer" id="ts-task-viewer">
+                <div class="ts-task-viewer-header ts-task-even">
+                    <p>Task Title</p>
+                    <p>Start</p>
+                    <p>End</p>
+                    <p>Status</p>
+                    <p>Modify</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

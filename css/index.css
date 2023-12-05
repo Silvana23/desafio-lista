@@ -1,0 +1,117 @@
+#app {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    color: var(--fg-0);
+    background-image: linear-gradient(to right bottom, #232634, #262938, #292d3d, #2d3041, #303446);
+}
+
+.ts-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.ts-logo {
+    max-width: 30%;
+}
+
+.ts-logo > img {
+    width: 100%;
+}
+
+.ts-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    padding-left: 8rem;
+}
+
+.ts-form {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 2rem;
+}
+
+.ts-form-section {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1rem;
+}
+
+.ts-form-input {
+    height: 3rem;
+
+    color: var(--fg-0);
+    background-color: var(--surface-0);
+
+    border: none;
+    border-radius: 0;
+
+    transition: border 500ms ease-in-out, border-radius 1s ease-in-out;
+}
+
+.ts-form-input::placeholder {
+    color: var(--fg-2);
+}
+
+.ts-form-input:focus {
+    outline: none;
+
+    border: solid 1px var(--accent);
+    border-radius: 8px;
+}
+
+.ts-form-input:hover {
+    border: solid 1px var(--accent);
+    border-radius: 8px;
+}
+
+.ts-form-btn {
+    height: 3rem;
+
+    color: var(--fg-0);
+    background-color: var(--surface-0);
+
+    border: none;
+    border-radius: 0;
+
+    transition: border 500ms ease-in-out, border-radius 1s ease-in-out;
+}
+
+.ts-form-btn:hover {
+    border: solid 1px var(--accent);
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1280px) {
+    .ts-wrapper {
+        flex-direction: column;
+    }
+
+    .ts-logo {
+        max-width: 70%;
+    }
+
+    .ts-container {
+        margin-top: 3rem;
+        padding: 0;
+
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    :root {
+        font-size: 11px;
+    }
+}

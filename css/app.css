@@ -1,0 +1,178 @@
+#app {
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    overflow: auto;
+
+    color: var(--fg-0);
+    background-image: linear-gradient(to right bottom, #232634, #262938, #292d3d, #2d3041, #303446);
+}
+
+.ts-header {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    top: 0;
+    left: 0;
+
+    height: 3.5rem;
+    width: 100%;
+
+    background-color: var(--bg-1);
+    border-bottom: solid 1px var(--accent);
+}
+
+.ts-header > img {
+    width: 3rem;
+}
+
+.ts-main {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.ts-task-editor {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 50%;
+}
+
+.ts-task-editor-row {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.ts-task-editor-input {
+    height: 3rem;
+
+    font-size: 1.25rem;
+
+    color: var(--fg-0);
+    background-color: var(--surface-0);
+
+    border: solid 1px rgba(0, 0, 0, 0);
+    border-radius: 0;
+
+    width: 100%;
+
+    margin: 1rem;
+
+    transition: border 500ms ease-in-out, border-radius 1s ease-in-out;
+}
+
+.ts-task-editor-input::placeholder {
+    color: var(--fg-2);
+}
+
+.ts-task-editor-input:focus {
+    outline: none;
+
+    border: solid 1px var(--accent);
+    border-radius: 8px;
+}
+
+.ts-task-editor-input:hover {
+    border: solid 1px var(--accent);
+    border-radius: 8px;
+}
+
+.ts-task-editor-controls {
+    justify-content: space-evenly;
+}
+
+.ts-app-button {
+    height: 3rem;
+
+    color: var(--fg-0);
+    background-color: var(--surface-0);
+
+    border: solid 1px rgba(0, 0, 0, 0);
+    border-radius: 0;
+
+    transition: border 500ms ease-in-out, border-radius 1s ease-in-out;
+
+    cursor: pointer;
+}
+
+.ts-app-button:hover {
+    border: solid 1px var(--accent);
+    border-radius: 8px;
+}
+
+.ts-task-viewer {
+    display: grid;
+    margin-top: 3rem;
+    width: 80%;
+}
+
+.ts-task-viewer-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+
+    text-align: center;
+}
+
+.ts-task-even {
+    background-color: var(--bg-2);
+}
+
+.ts-task-odd {
+    background-color: var(--bg-1);
+}
+
+.ts-app-button-hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    .ts-header > img {
+        display: none;
+    }
+
+    .ts-task-editor-row {
+        flex-direction: column;
+    }
+
+    .ts-task-editor-controls {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+
+        margin-top: 1rem;
+
+        width: 100%;
+    }
+
+    .ts-task-editor-controls > .ts-app-button:last-child {
+        grid-row: 3;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
